@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+}
+
+.mortgage-repayment-container {
+    background-color: #e8f4f8;
+    padding: 40px 150px;
+    border-radius: 10px;
+}
+
+.mortgage-repayment{
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-section, .results-section {
+    padding: 20px;
+    flex: 1;
+}
+
+.input-section {
+    background-color: #fff;
+}
+.header-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.clear-btn {
+    background: none;
+    border: 1px solid #f0f4f8;
+    color: #0078d4;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 7px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.theinputs{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border: none;
+    border: 1px solid #cfd8dc;
+    border-radius: 5px;
+    /* padding: 1px; */
+}
+.theinputs span{
+    background-color: #e3f4fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+.xt{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.theinputs input{
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.term-rate{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.mt{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.mortgage-type label {
+    display: block;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 1px solid rgb(100, 95, 95);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.mortgage-type input[type="radio"] {
+    appearance: none;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dcdcdc;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.mortgage-type input[type="radio"]:checked {
+    background-color: #FFD700;
+}
+
+.mortgage-type .selected {
+    background-color: #FFFFE0;
+    border-color: #FFD700;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #d8dc2f;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #3e3e3e;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg{
+    margin-right: 10px;
+}
+
+/* section 2 */
+
+.results-section {
+    background-color: #1e3a48;
+    color: white;
+    border-bottom-left-radius: 70px;
+}
+
+.res{
+    background-color: #0e2431;
+    border-top: 3px solid #d1ed58;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.results-section h2 {
+    font-size: 1.5rem;
+}
+
+.results-section p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.result h3 {
+    font-size: 1.85rem;
+    color: #d1ed58;
+}
+
+.result P {
+    font-size: 1.325rem;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 0.85rem; 
+    display: none;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.theinputs.error{
+    border: 1px solid #d9534f;
+    background-color: #ffe6e6;
+}
+.theinputs.error span {
+    background-color: #ffcccc; /* Reddish background for error state */
+}
+
+@media (max-width: 983px){
+    .mortgage-repayment-container {
+        padding: 40px;
+    }
+    
+}
+
+@media (max-width: 750px) {
+    .mortgage-repayment-container{
+        padding: 40px 100px 40px 100px;
+    }
+    .mortgage-repayment{
+        display: block;
+    }
+    .term-rate{
+        display: block;
+        align-items: center;
+    }    
+    .results-section {
+        border-bottom-left-radius: 0px;
+    }
+    
+}
+@media (max-width: 550px) {
+    .mortgage-repayment-container{
+        padding: 10px;
+    }
+}
