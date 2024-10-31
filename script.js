@@ -66,4 +66,14 @@ document.querySelector(".clear-btn").addEventListener("click", function() {
     document.getElementById("mortgage-form").reset();
     document.getElementById("monthly-repayment").textContent = "£0.00";
     document.getElementById("total-repayment").textContent = "£0.00";
+
+    // Reset error styles and messages
+    document.getElementById("mortgage-amount").parentNode.classList.remove('error');
+    document.getElementById("mortgage-term").parentNode.classList.remove('error');
+    document.getElementById("interest-rate").parentNode.classList.remove('error');
+
+    const errorMessages = document.querySelectorAll('.error-message');
+    Array.from(errorMessages).forEach(message => {
+        message.style.display = 'none'; // Hide error messages
+    });
 });
